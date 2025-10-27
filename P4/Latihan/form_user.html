@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Tambah User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: inline-block;
+      width: 120px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+      width: 230px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      margin-top: 15px;
+      width: 100%;
+      padding: 8px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Tambah Data User</h2>
+  <form action="simpan_user.php" method="POST">
+    <div class="form-group">
+      <label>ID User:</label>
+      <input type="text" name="id_user">
+    </div>
+    <div class="form-group">
+      <label>Nama:</label>
+      <input type="text" name="nama">
+    </div>
+    <div class="form-group">
+      <label>Username:</label>
+      <input type="text" name="username">
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" name="password">
+    </div>
+    <div class="form-group">
+      <label>No. Telp:</label>
+      <input type="text" name="no_telp">
+    </div>
+    <div class="form-group">
+      <label>Role:</label>
+      <select name="role">
+        <option value="admin">Admin</option>
+        <option value="pelanggan">Pelanggan</option>
+        <option value="koki">Koki</option>
+        <option value="kurir">Kurir</option>
+      </select>
+    </div>
+    <input type="submit" value="Simpan">
+  </form>
+</body>
+</html>
